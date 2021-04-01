@@ -5,7 +5,7 @@ def decorator(old_function):
     def new_function():
         start = (time.ctime())
         with open('time.log', 'a') as file:
-            file.write(f' {old_function.__name__} started at {start}')
+            file.write(f' {old_function.__name__} started at {start} \n')
 
     return new_function
 
